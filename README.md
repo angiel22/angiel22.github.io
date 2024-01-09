@@ -1,3 +1,3 @@
 # angiel22.github.io
 
-Welcome to my portfolio website repo
+Welcome to my portfolio website repository!
