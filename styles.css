@@ -31,6 +31,7 @@ body {
 a {
   color: #d4dbe4;
   transition: color 0.3s ease, background-color 0.3s ease;
+  text-decoration: none;
 }
 
 /* Hover effect */
@@ -147,8 +148,8 @@ a:visited {
 }
 
 .wall-page {
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between; */
   width: 80%;
 }
 
@@ -182,21 +183,22 @@ a:visited {
 }
 
 .opaque-bg p {
-  margin: 1.5em;
+  margin: 1em 1.5em;
   line-height: 2em;
 }
 
 
 #fullpage {
-  background-color: var(--lavender-gray);
+  background-color: #d4dae6;
   padding: 2em;
-  border-top-left-radius: 2em;
+  /* border-top-left-radius: 2em;
   border-top-right-radius: 2em;
   border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  border-bottom-right-radius: 0; */
 
-  /* position: relative;
-  z-index: 1; */
+  border-radius: 2em;
+  z-index: 2;
+  position: relative;
 }
 
 footer {
@@ -210,11 +212,20 @@ footer {
   gap: 10px;
 }
 
+.links i {
+  font-size: larger;
+  margin-right: 5px;
+}
+
+#contact hr {
+  width: 80%;
+}
+
 #links-container {
   display: flex;
   justify-content: space-around;
-  margin: 10vh;
-  align-items: center;
+  margin: 5em;
+  /* align-items: center; */
 }
 
 #links-container > p {
@@ -224,6 +235,7 @@ footer {
 #contact-bottom {
   display: flex;
   justify-content: space-around;
+  margin-top: 1.5em;
 }
 
 #contact-bottom button {
@@ -242,9 +254,18 @@ footer {
   display: flex;
 }
 
-.contact {
-  text-decoration: underline;
-  cursor: pointer;
+
+.email-card {
+  background-color: #434561;
+  opacity: 70%;
+  padding: 3em;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  width: 30%;
+}
+
+.email-card h3 {
+  margin: 0;
 }
 
 .project-container {
@@ -262,9 +283,23 @@ footer {
 }
 
 .project-container:hover h1 span {
-  transform: translateX(10px); /* Moves arrow right */
+  transform: translate(10px, -10px); 
   display: inline-block; /* Ensures transform works */
   transition: transform 0.3s ease-in-out;
+}
+
+.coming-soon {
+  opacity: 0;
+  transform: translateX(0);
+  transition: opacity 0.3s ease, transform 0.3s ease-in-out;
+  display: inline-block;
+  margin-left: 0;
+}
+
+.project-container:hover .coming-soon {
+  opacity: 1;
+  transform: translateX(10px); /* Moves text to the right */
+  margin-left: 5px; /* Adds a slight spacing */
 }
 
 .project-link {
@@ -275,6 +310,8 @@ footer {
 
 .project-text {
   flex: 1;
+  margin: 2.5em 0;
+  line-height: 1.5;
 }
 
 .project-text > h2 {
@@ -298,7 +335,6 @@ footer {
 
 .project-text p {
   font-size: 1rem;
-  line-height: 1.5;
   color: var(--chinese-black);
 }
 
@@ -365,48 +401,58 @@ footer {
 #about {
   display: flex;
   flex-direction: column;
+  /* justify-content: space-between; */
   align-items: center;
-  padding: 3em;
+  /* top right bottom left */
+  padding: 10em 5em 8em 5em;
+  gap: 5em;
   background-color: rgba(19, 17, 31, 0.6);
 
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-bottom-left-radius: 2em;
   border-bottom-right-radius: 2em;
+
+  margin-top: -30px;
+  z-index: 1;
 }
 
-.img-content {
+#about-content {
   display: flex;
-  align-items: center;
-  margin: 2.5em;
-  width: 70%;
+  gap: 5em;
 }
 
-.img-content img {
+#about-text {
+  max-width: 40vw;
+}
+
+#about img {
   /* width: 30vw; */
-  height: 65vh;
+  margin-top: 1em;
+  height: 60vh;
   border-radius: 15px;
 }
 
-.full-skillbar {
-  margin: 2vw;
+#skill-content {
+  display: flex;
+  gap: 5em;
 }
 
 .skillbar {
-  margin: 1vh;
+  margin-bottom: 1em;
 }
 
 .skillbar-title {
   max-width: 350px;
+  line-height: 1.5em;
 }
 
 .skillBarContainer {
   width: 100%;
   max-width: 350px;
-  height: 26px;
-  height: 1.66em;
+  height: 18px;
   background: #e6eae3;
-  background: rgb(8, 102, 220);
+  background: rgb(75, 12, 222);
   background: rgba(8, 102, 220, .2);
   overflow: hidden;
   border-radius: 5px;
@@ -415,9 +461,8 @@ footer {
 .skillBarValue {
   height: 1.66em;
   float: left;
-  background: #0866dc;
-  background: rgb(8, 102, 220);
-  background: rgba(8, 102, 220, .75);
+  background: rgb(75, 12, 222, .75);
+  /* background: rgba(8, 102, 220, .75); */
 
 }
 
@@ -488,9 +533,8 @@ footer {
 #spotify {
   display: flex;
   flex-direction: column;
-  width: 70vw;
   justify-content: space-around;
-  align-items: center;
+  width: 50vw;
 }
 
 
@@ -520,7 +564,7 @@ footer {
 @media (max-width: 768px) {
   body {
       font-size: 16px;
-      background-color: lightgray;
+      /* background-color: lightgray; */
       padding: 10px;
   }
 }
