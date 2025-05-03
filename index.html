@@ -23,9 +23,9 @@
     <canvas id="starCanvas"></canvas>
 
     <div class="navigation">
-      <a href="#works">WORKS</a>
-      <a href="#about">ABOUT</a>
-      <a href="#contact">CONTACT</a>
+      <a href="#works" class="nav-link">WORKS</a>
+      <a href="#about" class="nav-link">ABOUT</a>
+      <a href="#contact" class="nav-link">CONTACT</a>
     </div>
 
     <div class="opaque-bg animated fadeInDown">
@@ -46,7 +46,27 @@
   <!-- begin fullpage -->
   <div id="fullpage">
     <!-- begin section -->
-    <div id="works">
+    <section id="works">
+      <a href="https://people.rit.edu/al2231/ISTE340/project2/" target="_blank" class="project-link">
+        <div class="project-container">
+          <img src="assets/anotetoyou-mockup.png" alt="A Note To You Mockup">
+          <div class="project-text">
+            <h2>
+              Fullstack Development // Leadership Project
+            </h2>
+            <h1>
+              A Note To You <span>↗</span>
+            </h1>
+            <p>
+              A Note To You is an online platform developed in partnership with a local arts organization to encourage
+              meaningful reflection on personal identity and life experiences. The site features anonymous notes written
+              by students in response to the guided prompt: "Write a note to your past or future self." Built using
+              JavaScript, Bootstrap, and PHP, the project blends thoughtful content with a responsive, user-friendly
+              design.
+            </p>
+          </div>
+        </div>
+      </a>
       <a href="https://devpost.com/software/forme-5h8m20" target="_blank" class="project-link">
         <div class="project-container">
           <div class="project-text">
@@ -106,14 +126,14 @@
         </div>
       </a>
 
-    </div>
+    </section>
     <!-- end section -->
   </div>
   <!-- end fullpage-->
 
-  <div id="about">
+  <section id="about">
     <div id="about-content">
-      
+
       <img src="assets/me25.jpg" alt="picture of Angie">
       <div id="about-text">
         <h2>ABOUT ANGIE</h2>
@@ -144,7 +164,7 @@
             <div class="skillBarValue value-90"></div>
           </div>
         </div> <!-- End Skill Bar -->
-  
+
         <div class="skillbar">
           <div class="skillbar-title"> <!--style="background: #EBB035;"-->
             <span>Creating Databases with MySQL and Connecting with Java</span>
@@ -153,7 +173,7 @@
             <div class="skillBarValue value-80"></div>
           </div>
         </div> <!-- End Skill Bar -->
-  
+
         <div class="skillbar">
           <div class="skillbar-title"> <!--style="background: #218559;"-->
             <span>php and Admin</span>
@@ -162,7 +182,7 @@
             <div class="skillBarValue value-70"></div>
           </div>
         </div> <!-- End Skill Bar -->
-  
+
         <div class="skillbar">
           <div class="skillbar-title"> <!--style="background: #6840D4;"-->
             <span>Using React.js and ASP.NET MVC</span>
@@ -171,7 +191,7 @@
             <div class="skillBarValue value-50"></div>
           </div>
         </div> <!-- End Skill Bar -->
-  
+
         <div class="skillbar">
           <div class="skillbar-title"> <!--style="background: #AB4DD2;"-->
             <span>APIs and Consuming Data</span>
@@ -184,47 +204,49 @@
 
       <img src="assets/metoo25.jpg" alt="Second Image of Angie">
     </div>
-    
 
-  </div>
+
+  </section>
   <!-- end about section -->
 
   <!-- footer -->
-  <footer id="contact">
-    <div id="links-container">
-      <div class="email-card">
-        <h3>CONNECT WITH ME</h3>
-        <p>Feel free to reach out!</p>
-        <a class="email" href="mailto:angiel.4work@gmail.com">Email Me ↗</a>
-      </div>
+  <section id="contact">
+    <footer>
+      <div id="links-container">
+        <div class="email-card">
+          <h3>CONNECT WITH ME</h3>
+          <p>Feel free to reach out!</p>
+          <a class="email" href="mailto:angiel.4work@gmail.com">Email Me ↗</a>
+        </div>
 
-      <div class="links">
-        <h4>SOCIALS + MORE</h4>
-        <a href="https://www.linkedin.com/in/angie-li-902082269/">
-          <i class="fab fa-linkedin"></i> My LinkedIn
-        </a>
-        <a href="https://docs.google.com/document/d/1Wj7no1J77GqJvjqzcKh-HJBSZ5AbYYqCOfej4uKdKsk/edit?usp=sharing"
-          target="_blank">
-          <i class="fas fa-file-alt"></i> My Resume
-        </a>
-        <a href="https://github.com/al2231">
-          <i class="fab fa-github"></i> My GitHub
-        </a>
-        <a href="projects.txt">
-          <i class="fa-solid fa-calendar"></i> Project Archives
-        </a>
-      </div>
+        <div class="links">
+          <h4>SOCIALS + MORE</h4>
+          <a href="https://www.linkedin.com/in/angie-li-902082269/">
+            <i class="fab fa-linkedin"></i> My LinkedIn
+          </a>
+          <a href="https://docs.google.com/document/d/1Wj7no1J77GqJvjqzcKh-HJBSZ5AbYYqCOfej4uKdKsk/edit?usp=sharing"
+            target="_blank">
+            <i class="fas fa-file-alt"></i> My Resume
+          </a>
+          <a href="https://github.com/al2231">
+            <i class="fab fa-github"></i> My GitHub
+          </a>
+          <a href="projects.txt">
+            <i class="fa-solid fa-calendar"></i> Project Archives
+          </a>
+        </div>
 
-    </div>
-    <hr />
-    <div id="contact-bottom">
-
-      <div>
-        <p id="time"></p>
-        <p>© Angie Li <span id="copyright-year"></span></p>
       </div>
-    </div>
-  </footer>
+      <hr />
+      <div id="contact-bottom">
+
+        <div>
+          <p id="time"></p>
+          <p>© Angie Li <span id="copyright-year"></span></p>
+        </div>
+      </div>
+    </footer>
+  </section>
 </body>
 
 </html>
