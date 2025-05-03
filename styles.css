@@ -101,6 +101,10 @@ a:visited {
   transform: translateY(0px);
 }
 
+.nav-link.active {
+  font-weight: bold;
+}
+
 .typing {
   font-family: 'Inconsolata', Consolas, monospace;
   color: #C0C7D3;
