@@ -15,6 +15,7 @@ body {
   height: auto;
   background-attachment: fixed;
   background-size: cover;
+  overflow-x: hidden;
 }
 
 :root {
@@ -306,6 +307,10 @@ footer {
   margin-left: 5px; /* Adds a slight spacing */
 }
 
+.project-container.reverse {
+  flex-direction: row-reverse;
+}
+
 .project-link {
   text-decoration: none; /* Removes underline */
   color: inherit; /* Keeps text color unchanged */
@@ -555,7 +560,8 @@ footer {
     display: flex;
     flex-direction: row;
     gap: 5px;
-    width: 80%;
+    width: 100%;
+    overflow-x: auto;
   }
   
   .info-imgs img {
@@ -567,8 +573,140 @@ footer {
 /* Phones (Up to 768px) */
 @media (max-width: 768px) {
   body {
-      font-size: 16px;
-      /* background-color: lightgray; */
-      padding: 10px;
+    font-size: 16px;
+    /* background-color: lightgray; */
+    padding: 10px;
+  }
+  
+  .project-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-container.reverse {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-container img {
+    width: 100%;
+  }
+
+  .project-text {
+    margin-top: 0;
+  }
+
+  #about-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #about-content img {
+    max-width: 50vw;
+    margin: 0 auto;
+  }
+
+  #about-text {
+    max-width: 80vw;
+  }
+
+  #spotify {
+    width: 100%;
+  }
+
+  #skill-content {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  #skill-content img {
+    max-width: 40vw;
+    margin: 0 auto;
+  }
+}
+
+
+@media (max-width: 550px) {
+  .navigation {
+    text-align: center;
+    padding: 2em 1em;
+  }
+
+  .navigation a {
+    font-size: 16px;
+    padding: 6px 8px;
+    margin: 0 5px;
+  }
+  
+  .project-container {
+    padding: 0;
+    margin: 0;
+  }
+
+  #about {
+    padding: 4em;
+  }
+
+  .aboutme {
+    height: 40vh;
+    padding-top: 2em;
+    padding-left: 5em;
+  }
+
+  #skill-content img {
+    max-width: 100%;
+    height: 40vh;
+  }
+
+  #about-content {
+    margin-top: 2em;
+  }
+
+  #about-content img {
+    max-width: 100%;
+    height: 40vh;
+  }
+
+  #about-text {
+    max-width: 100%;
+  }
+
+  .email-card {
+    width: 80%;
+    padding: 2em;
+  }
+
+  #links-container {
+    flex-direction: column;
+    margin: 2em;
+  }
+
+  #contact-bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
+
+  #contact-bottom button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .info-text {
+    margin-left: 0;
+    padding: 1em;
+    font-size: 0.95rem;
+  }
+
+  .info-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
+
+  .info-links a {
+    width: 80%;
+    text-align: center;
+    font-size: 0.95rem;
   }
 }
