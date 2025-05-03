@@ -15,6 +15,8 @@ const observer = new IntersectionObserver(
       if (entry.isIntersecting) {
         navLinks.forEach((link) => link.classList.remove("active"));
         link.classList.add("active");
+
+        history.replaceState(null, "", `#${id}`);
       }
     });
   },
